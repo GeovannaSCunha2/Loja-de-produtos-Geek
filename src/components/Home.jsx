@@ -1,5 +1,8 @@
 import Carousel from 'react-bootstrap/Carousel'
 import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import Table from 'react-bootstrap/Table';
+import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import img1 from '../assets/img/img1.webp'
 import img2 from '../assets/img/img2.webp'
@@ -17,6 +20,16 @@ import card5 from '../assets/img/card5.jpg'
 import card6 from '../assets/img/card6.webp'
 
 export default function Home(){
+    const [showModal, setShowModal] = useState(false);
+
+    const handleOpenModal = () => {
+        setShowModal(true);
+    };
+
+    const handleCloseModal = () => {
+        setShowModal(false);
+    };
+
     return (
         <>
     <Carousel data-bs-theme="dark">
@@ -102,47 +115,95 @@ export default function Home(){
       </Carousel.Item>
     </Carousel>
 
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={card1} />
-      <Card.Body>
-        <Card.Title> <a href="#">Figure</a> </Card.Title>
-      </Card.Body>
-    </Card>
+    <h2 className='text-center'>Busque por categoria:</h2>
 
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={card2} />
-      <Card.Body>
-        <Card.Title> <a href="#">Figure</a> </Card.Title>
-      </Card.Body>
-    </Card>
+    <div className="container">
+        <Card style={{ width: '18rem' }}>
+            <Card.Img variant="top" src={card1} />
+            <Card.Body className='card-header d-flex flex-column align-items-center justify-content-center'>
+                <Card.Title className='text-center'>Figures</Card.Title>
+                <Button variant="secondary">Comprar</Button>
+            </Card.Body>
+        </Card>
 
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={card3} />
-      <Card.Body>
-        <Card.Title> <a href="#">Figure</a> </Card.Title>
-      </Card.Body>
-    </Card>
+        <Card style={{ width: '18rem' }}> 
+        <Card.Img variant="top" src={card2} />
+        <Card.Body className='card-header'>
+            <Card.Title className='text-center'>Mangás</Card.Title>
+        </Card.Body>
+        </Card>
 
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={card4} />
-      <Card.Body>
-        <Card.Title> <a href="#">Figure</a> </Card.Title>
-      </Card.Body>
-    </Card>
+        <Card style={{ width: '18rem' }}>
+        <Card.Img variant="top" src={card3} />
+        <Card.Body className='card-header'>
+            <Card.Title className='text-center'>Chaveiros</Card.Title>
+        </Card.Body>
+        </Card>
 
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={card5} />
-      <Card.Body>
-        <Card.Title> <a href="#">Figure</a> </Card.Title>
-      </Card.Body>
-    </Card>
+        <Card style={{ width: '18rem' }}>
+        <Card.Img variant="top" src={card4} />
+        <Card.Body className='card-header'>
+            <Card.Title className='text-center'>Funkos Pop</Card.Title>
+        </Card.Body>
+        </Card>
 
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={card6} />
-      <Card.Body>
-        <Card.Title> <a href="#">Figure</a> </Card.Title>
-      </Card.Body>
-    </Card>
+        <Card style={{ width: '18rem' }}>
+        <Card.Img variant="top" src={card5} />
+        <Card.Body className='card-header'>
+            <Card.Title className='text-center'>Pelúcias</Card.Title>
+        </Card.Body>
+        </Card>
+
+        <Card style={{ width: '18rem' }}>
+        <Card.Img variant="top" src={card6} />
+        <Card.Body className='card-header'>
+            <Card.Title className='text-center'>Adesivos</Card.Title>
+        </Card.Body>
+        </Card>
+    </div>
+
+    <div className='d-flex align-items-center justify-content-center'>
+        <h2 className="text-center">Confira alguns valores:</h2>
+        <Button variant="secondary" onClick={handleOpenModal}>Confira Aqui</Button>
+    </div>
+
+    <Modal show={showModal} onHide={handleCloseModal}>
+        <Modal.Header closeButton>
+            <Modal.Title>Tabela de preços</Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+            <Table striped bordered hover variant="dark">
+            <thead>
+                <tr>
+                <th></th>
+                <th>Produto</th>
+                <th>Descrição</th>
+                <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td>1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                </tr>
+            </tbody>
+            </Table>
+        </Modal.Body>
+
+        <Modal.Footer>
+            <Button variant="secondary" onClick={handleCloseModal}>Fechar</Button>
+        </Modal.Footer>
+    </Modal>
+
         </>
     );
 }

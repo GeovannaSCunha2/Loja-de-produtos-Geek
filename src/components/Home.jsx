@@ -36,10 +36,11 @@ export default function Home() {
 
     return (
         <>
+            <div className='container w-40'>
             <Carousel data-bs-theme="dark">
                 <Carousel.Item>
                     <img
-                        className="d-block w-50"
+                        className="d-block w-100"
                         src={img1}
                         alt="Camiseta"
                     />
@@ -49,7 +50,7 @@ export default function Home() {
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block w-50"
+                        className="d-block w-100"
                         src={img2}
                         alt="Camiseta"
                     />
@@ -59,7 +60,7 @@ export default function Home() {
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block w-50"
+                        className="d-block w-100"
                         src={img3}
                         alt="Camiseta"
                     />
@@ -69,7 +70,7 @@ export default function Home() {
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block w-50"
+                        className="d-block w-100"
                         src={img4}
                         alt="Camiseta"
                     />
@@ -79,7 +80,7 @@ export default function Home() {
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block w-50"
+                        className="d-block w-100"
                         src={img5}
                         alt="Camiseta"
                     />
@@ -89,7 +90,7 @@ export default function Home() {
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block w-50"
+                        className="d-block w-100"
                         src={img6}
                         alt="Camiseta"
                     />
@@ -99,7 +100,7 @@ export default function Home() {
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block w-50"
+                        className="d-block w-100"
                         src={img7}
                         alt="Camiseta"
                     />
@@ -109,7 +110,7 @@ export default function Home() {
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block w-50"
+                        className="d-block w-100"
                         src={img8}
                         alt="Camiseta"
                     />
@@ -118,6 +119,8 @@ export default function Home() {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
+            </div>
+
 
             <h2 className='text-center my-5'>Busque por categoria:</h2>
 

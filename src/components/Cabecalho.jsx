@@ -7,7 +7,7 @@ import Icon from '../assets/img/icon.png'
 function Cabecalho() {
   return (
     <>
-          <Navbar expand="lg" className="bg-body-tertiary">
+          <Navbar expand="md" className="bg-body-tertiary">
             <Container>
               <Navbar.Brand href="#home"><img src={Icon} alt="" width={50} /> Shinzō Store</Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />

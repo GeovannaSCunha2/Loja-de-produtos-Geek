@@ -6,4 +6,6 @@ footer{
         padding: 2%;
     }
 }
-.container
+#carrossel{
+    width: 40%;
+}

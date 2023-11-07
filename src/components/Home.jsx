@@ -2,7 +2,7 @@ import Carousel from 'react-bootstrap/Carousel'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Table from 'react-bootstrap/Table';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import img1 from '../assets/img/img1.webp'
 import img2 from '../assets/img/img2.webp'
@@ -36,7 +36,7 @@ export default function Home() {
 
     return (
         <>
-            <div className='container w-40'>
+            <div className='container' id='carrossel'>
             <Carousel data-bs-theme="dark">
                 <Carousel.Item>
                     <img
